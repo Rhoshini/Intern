@@ -1,0 +1,763 @@
+{
+	"info": {
+		"_postman_id": "90cb5719-a2ca-4aaa-b782-46ff39301f98",
+		"name": "AutomationOne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Change Request",
+			"item": [
+				{
+					"name": "Get all Change Request JSON",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/change_request?sysparm_fields=number,sys_id",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"change_request"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,sys_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getall Change Request XML",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/change_request?sysparm_fields=number,sys_id",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"change_request"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,sys_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Change Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check the status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"short_description\": \"Change request created using postman\"\r\n}"
+						},
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/change_request",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"change_request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a change request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"short_description\": \"Updated short description\"\r\n}"
+						},
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/change_request/4e02ec9c2fda3010efcac786f699b661",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"change_request",
+								"4e02ec9c2fda3010efcac786f699b661"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a change request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"No content to display with status code 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/change_request/1766f1de47410200e90d87e8dee490f6",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"change_request",
+								"1766f1de47410200e90d87e8dee490f6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Change Request Chaning",
+			"item": [
+				{
+					"name": "Getall Change Request XML",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/api/now/table/{{table}}?sysparm_fields=number,sys_id",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"{{table}}"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,sys_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Change Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//get the response in json format\r",
+									"var resp = pm.response.json();\r",
+									"\r",
+									"console.log(resp);\r",
+									"\r",
+									"//get sys_id from response\r",
+									"var id = resp.result.sys_id;\r",
+									"\r",
+									"//set the value for global variable\r",
+									"pm.globals.set(\"sys_id\", id);\r",
+									"\r",
+									"pm.test(\"Check the status code as 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"short_description\": \"{{short_desc}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}/api/now/table/{{table}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"{{table}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a change request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"short_description\": \"Updated short description\"\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}/api/now/table/{{table}}/{{sys_id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"{{table}}",
+								"{{sys_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a change request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/now/table/{{table}}/{{sys_id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"{{table}}",
+								"{{sys_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an INC",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"short_description\":\"Updated in postman patch\"}\r\n"
+						},
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/change_request/03d17ac82fd63010efcac786f699b68f",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"change_request",
+								"03d17ac82fd63010efcac786f699b68f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Create Incident",
+			"item": [
+				{
+					"name": "Get all inc using json",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check the status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/incident?sysparm_fields=number,sys_id",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,sys_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateInc using JSON",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check the status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"short_description\":\"Created using postmanWeb\"}\r\n"
+						},
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/incident",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all INC using XML",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check the status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/incident?sysparm_fields=number,sys_id",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,sys_id"
+								},
+								{
+									"key": "sysparm_fields\n",
+									"value": "sys_id,number",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateInc using xml",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check the status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<request>\r\n    <entry>\r\n        <short_description>Created using postmanWeb</short_description>\r\n    </entry>\r\n</request>"
+						},
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/incident",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an inc",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"No content is declared with status code 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<request>\r\n    <entry>\r\n        <short_description>Created using postmanWeb</short_description>\r\n    </entry>\r\n</request>"
+						},
+						"url": {
+							"raw": "https://dev78371.service-now.com/api/now/table/incident/46ee8c2fa9fe198100623592c70d643e",
+							"protocol": "https",
+							"host": [
+								"dev78371",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident",
+								"46ee8c2fa9fe198100623592c70d643e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "bv0MMhw0tUXC",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "table",
+			"value": "change_request"
+		}
+	]
+}
